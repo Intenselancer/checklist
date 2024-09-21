@@ -20,6 +20,9 @@ nav {
     display: none;
 }
 
+.cursor {
+    cursor: pointer;
+}
 
 .pad {
     padding: 3px 7px;
@@ -144,6 +147,9 @@ input[type="tel"], input[type="text"] {
 }
 
 .dropdown-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     border-radius: 50px;
     padding: 10px 20px;
     border: 1px solid rgba(131, 39, 41, 1);
@@ -152,10 +158,31 @@ input[type="tel"], input[type="text"] {
     background-color: white;
     margin-right: 10px;
     cursor: pointer;
+    white-space: inherit;
 }
 
 .dropdown-wrapper select:hover {
     background: linear-gradient(to right, #F2E7E9, #D9BDBE);
+}
+
+.sel {
+    position: relative;
+}
+
+.sel::after {
+    content: "\f078"; /* Unicode for Font Awesome's chevron-down */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    position: absolute;
+    top: 23%;
+    right: 14%;
+    color: #6E1C1E;
+    z-index: 100;
+}
+
+select > option {
+    background-color: white;
+    color: gray;
 }
 
 .hero-button {
@@ -402,7 +429,7 @@ input[type="checkbox"]:checked {
     align-items: center;
     width: 100%;
     margin: 20px auto;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 /* Image grid styling */
