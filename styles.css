@@ -4,8 +4,13 @@ body {
     font-family: "Fraunces", serif;
 }
 
-nav {
-    padding: 15px;
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
 }
 
 .font-san {
@@ -40,22 +45,6 @@ input[type="tel"], input[type="text"] {
     border: none;
     padding: 3px;
     outline: none;
-}
-
-.nav-icons i {
-    margin: 0 10px;
-    color: #490A0C;
-    cursor: pointer;
-}
-
-.icons i {
-    margin: 0 5px;
-    color: #490A0C;
-    cursor: pointer;
-}
-
-.navbar-logo img {
-    max-height: 50px;
 }
 
 .headings {
@@ -429,7 +418,6 @@ input[type="checkbox"]:checked {
     align-items: center;
     width: 100%;
     margin: 20px auto;
-    /* z-index: -1; */
 }
 
 /* Image grid styling */
@@ -470,4 +458,5 @@ input[type="checkbox"]:checked {
     margin-top: -5rem;
     background: linear-gradient(to bottom, #efe3e5dd, #e1cfd2, #efe1e2d4);
     box-shadow: 2px -20px 20px 2px #efe3e5dd;
+    z-index: 10;
 }
