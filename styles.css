@@ -40,6 +40,10 @@ a:hover {
     outline: none;
 }
 
+.text-ss {
+    font-size: 8px;
+}
+
 input[type="search"],
 input[type="tel"], input[type="text"] {
     border: none;
