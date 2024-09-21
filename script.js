@@ -1,3 +1,22 @@
+// Handle the navigation
+function handleClick(selectedValue) {
+    // Define the mapping of values to section IDs
+    const sectionMapping = {
+        'Gown': 'check-list',
+        'Lehenga': 'check-list',
+        'Saree': 'check-list',
+        // Add more mappings as needed
+    };
+
+    // Get the corresponding section ID
+    const sectionId = sectionMapping[selectedValue];
+
+    // If a valid section ID is found, scroll to that section
+    if (sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 
 
 // mobile swiper
@@ -80,7 +99,7 @@ const login = document.getElementById('login');
 
 
 // Function to expand the grid when 'Continue' is clicked
-continueButton.addEventListener('click', function() {
+continueButton.addEventListener('click', function () {
     // Change the height of the image grid to 'auto' to display all images
     imageGrid.style.height = 'auto';
 
