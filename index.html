@@ -23,42 +23,6 @@
 </head>
 
 <body>
-    <header>
-        <nav class="d-flex align-items-center justify-content-between mx-3">
-            <!-- Search -->
-            <div class="d-none icons d-md-flex align-items-center ser">
-                <i class="bi-search pr-2"></i>
-                <input type="search" placeholder="Telugu Weddings">
-                <i class="bi-camera pr-2"></i>
-                <i class="bi-mic pr-2"></i>
-            </div>
-
-            <!-- Menu Icon (Visible on Mobile) -->
-            <div class="d-flex align-items-center d-md-none">
-                <i class="bi-list" style="font-size: 24px;"></i>
-            </div>
-
-            <!-- Desktop Logo -->
-            <div class="navbar-logo d-none d-md-block">
-                <img src="./assets/Logo.png" alt="logo">
-            </div>
-
-            <!-- Mobile Logo -->
-            <div class="navbar-logo-mobile d-md-none">
-                <img src="./assets/Mobile Logo.png" alt="mobile logo">
-            </div>
-
-            <!-- Icons -->
-            <div class="nav-icons d-flex align-items-center">
-                <i class="bi bi-gem"></i>
-                <i class="bi bi-heart"></i>
-                <i class="bi bi-shop"></i>
-                <i class="bi bi-person"></i>
-                <i class="bi bi-cart"></i>
-            </div>
-        </nav>
-    </header>
-
     <!-- Hero Section -->
     <section id="hero" class="d-flex flex-column px-4 px-md-5 mar-t">
         <div class="d-flex flex-column align-items-center justify-content-center">
@@ -97,7 +61,9 @@
 
                     <button style="width: fit-content;"
                         class="gradient-btn border-0 d-flex mt-4 mb-4 gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
-                        <span class="text-white">Let's Find My Perfect Look!</span>
+                        <span class="text-white">
+                            <a href="#get-ready">Let's Find My Perfect Look!</a>
+                        </span>
                         <div class="chevron-btn">
                             <i class="bi bi-chevron-right"></i>
                         </div>
@@ -151,8 +117,8 @@
                 </div>
                 <div class="d-flex justify-content-center dropdown-wrapper gap-2">
                     <div class="sel d-flex mb-3">
-                        <select class="d-flex justify-content-center">
-                            <option value="Telugu Bride">Gown</option>
+                        <select class="d-flex justify-content-center" onclick="handleClick(this.value)">
+                            <option value="Gown">Gown</option>
                             <option value="Tamil Bride">Tamil Bride</option>
                             <option value="Kannadika Bride">Kannadika Bride</option>
                             <option value="Punjabi Bride">Punjabi Bride</option>
@@ -168,8 +134,8 @@
                 </div>
                 <div class="d-flex justify-content-center dropdown-wrapper gap-2">
                     <div class="sel d-flex mb-3">
-                        <select class="d-flex justify-content-center">
-                            <option value="Telugu Bride">Lehenga</option>
+                        <select class="d-flex justify-content-center" onclick="handleClick(this.value)">
+                            <option value="Lehenga">Lehenga</option>
                             <option value="Tamil Bride">Tamil Bride</option>
                             <option value="Kannadika Bride">Kannadika Bride</option>
                             <option value="Punjabi Bride">Punjabi Bride</option>
@@ -185,8 +151,8 @@
                 </div>
                 <div class="d-flex justify-content-center dropdown-wrapper gap-2">
                     <div class="sel d-flex mb-3">
-                        <select class="d-flex justify-content-center">
-                            <option value="Telugu Bride">Saree</option>
+                        <select class="d-flex justify-content-center" onclick="handleClick(this.value)">
+                            <option value="Saree">Saree</option>
                             <option value="Tamil Bride">Tamil Bride</option>
                             <option value="Kannadika Bride">Kannadika Bride</option>
                             <option value="Punjabi Bride">Punjabi Bride</option>
@@ -223,10 +189,10 @@
         <div class="d-flex d-md-none align-items-center justify-content-center">
             <div class="d-flex justify-content-center dropdown-wrapper gap-2 active-label">
                 <div class="sel d-flex mb-3">
-                    <select id="swiper-select" class="d-flex justify-content-center">
-                        <option value="0">Gown</option>
-                        <option value="1">Lehenga</option>
-                        <option value="2">Saree</option>
+                    <select id="swiper-select" class="d-flex justify-content-center" onclick="handleClick(this.id)">
+                        <option id="Gown" value="0">Gown</option>
+                        <option id="Lehenga" value="1">Lehenga</option>
+                        <option id="Saree" value="2">Saree</option>
                     </select>
                 </div>
             </div>
@@ -422,7 +388,7 @@
         <div class="d-flex justify-content-center mt-2">
             <button style="width: fit-content;"
                 class="gradient-btn border-0 d-flex mt-4 mb-4 gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
-                <span class="text-white">See My Dream Look!</span>
+                <span class="text-white"><a href="#wedding-look">See My Dream Look!</a></span>
                 <div class="chevron-btn">
                     <i class="bi bi-chevron-right"></i>
                 </div>
@@ -831,7 +797,7 @@
                 Look!</p>
         </div>
 
-        <div class="d-flex flex-column flex-md-row gap-3">
+        <div class="d-flex flex-column flex-md-row gap-3 mb-2">
             <div class="d-flex flex-column align-items-center align-items-lg-start">
                 <p class="text-col">Name</p>
                 <div
@@ -851,7 +817,7 @@
             </div>
 
             <button id="continue-button" style="width: fit-content;"
-                class="gradient-btn border-0 d-flex mt-4 mb-4 gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
+                class="gradient-btn border-0 d-flex mt-4 gap-3 align-self-lg-end align-self-center align-items-center text-white px-4 py-1 rounded-pill">
                 <span class="text-white">Continue</span>
                 <div class="chevron-btn">
                     <i class="bi bi-chevron-right"></i>
