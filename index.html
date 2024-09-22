@@ -216,7 +216,7 @@
                     <a href="#get-ready"><i class="bi bi-arrow-up"></i></a>
                 </div>
                 <div class="d-flex arr">
-                    <a href="#wedding-look"><i class="bi bi-arrow-down"></i></a>
+                    <a href="#modboardSection"><i class="bi bi-arrow-down"></i></a>
                 </div>
             </div>
         </div>
@@ -395,9 +395,9 @@
 
         <!-- Button section -->
         <div class="d-flex justify-content-center mt-2">
-            <button style="width: fit-content;"
+            <button onclick="handleCategory()" style="width: fit-content;"
                 class="gradient-btn border-0 d-flex mt-4 mb-4 gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
-                <span class="text-white"><a href="#wedding-look">See My Dream Look!</a></span>
+                <span class="text-white">See My Dream Look!</span>
                 <div class="chevron-btn">
                     <i class="bi bi-chevron-right"></i>
                 </div>
@@ -406,7 +406,7 @@
     </section>
 
     <!-- wedding look -->
-    <section id="wedding-look" class="text-center container my-5">
+    <section id="modboardSection" class="text-center container my-5 visually-hidden">
         <div class="d-flex mar-t">
             <div class="d-flex w-100 flex-column align-items-center justify-content-center">
                 <h1 class="headings text-center">Your Wedding Look, Perfectly Curated</h1>
@@ -421,381 +421,43 @@
         </div>
 
         <div class="d-flex align-items-center justify-content-center">
-            <div class="d-flex px-4 py-2 gap-3 align-items-center justify-content-center dark-border rounded-pill">
+            <div onclick="sendBrideDetails()"
+                class="d-flex px-4 py-2 gap-3 align-items-center justify-content-center dark-border cursor whats rounded-pill">
                 <span>Share Your Wedding Look</span> <i class="bi bi-whatsapp"></i>
             </div>
         </div>
 
-        <div class="d-flex flex-wrap align-items-center gap-2 justify-content-center mar-t">
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Hair Jewellery</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Forehead Pendant</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Earring-Drops</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Earring-Studs</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Earring Loops</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Choker Necklace</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Long Necklace</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Rings</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Waist Belt</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Single Statement Bangles</span>
-            </div>
-            <div class="d-flex px-4 py-2 gap-3 chip align-items-center justify-content-center dark-border rounded-pill">
-                <span>Bracelets</span>
-            </div>
-        </div>
+        <div id="categoryContainer" class="d-flex flex-wrap align-items-center gap-2 justify-content-center mar-t"></div>
 
         <!-- image grid -->
         <div class="image-grid-container">
             <!-- Grid for images -->
-            <div class="image-grid gap-2" id="image-grid">
-
-                <div class="d-flex flex-column gap-2">
-                    <div class="image-box">
-                        <img src="./assets/img1.png" alt="Image 1">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img5.png" alt="Image 2">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img1.png" alt="Image 1">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img5.png" alt="Image 2">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <div class="image-box">
-                        <img src="./assets/img2.png" alt="Image 3">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img6.png" alt="Image 4">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img8.png" alt="Image 5">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img2.png" alt="Image 3">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img6.png" alt="Image 4">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img8.png" alt="Image 5">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <div class="image-box">
-                        <img src="./assets/img3.png" alt="Image 6">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img9.png" alt="Image 7">
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img3.png" alt="Image 6">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img9.png" alt="Image 7">
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column gap-2">
-                    <div class="image-box">
-                        <img src="./assets/img4.png" alt="Image 8">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img7.png" alt="Image 9">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img10.png" alt="Image 10">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img4.png" alt="Image 8">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img7.png" alt="Image 9">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="image-box">
-                        <img src="./assets/img10.png" alt="Image 10">
-
-                        <div class="d-flex justify-content-between px-2" style="margin-top: -2.5rem;">
-                            <button
-                                class="d-flex align-items-center gap-2 pad justify-content-between dark-border rounded-pill">
-                                <span class="text-s">Copy URL</span>
-                                <i class="bi bi-copy"></i>
-                            </button>
-
-                            <button class="dark-border pad rounded-pill">
-                                <i class="bi bi-whatsapp"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="image-grid gap-2" id="moodboard"></div>
 
         </div>
 
+    </section>
+
+    <!-- loading -->
+    <section id="modboardLoading" class="visually-hidden">
+        <div class="d-flex animate-pulse">
+            <!-- Main Content -->
+            <div class="w-100 p-5">
+                <!-- Header -->
+                <div class="h-12 bg-gray rounded mb-4"></div>
+
+                <!-- Mod Cards -->
+                <div class="d-grid mt-5 grid-cols-3 gap-2">
+                    <div class="min-h-40 row-span-2 bg-gray rounded"></div>
+                    <div class="min-h-40 bg-gray rounded"></div>
+                    <div class="min-h-40 bg-gray rounded"></div>
+                    <div class="min-h-40 bg-gray rounded"></div>
+                    <div class="min-h-40 row-span-2 bg-gray rounded"></div>
+                    <div class="min-h-40 bg-gray rounded"></div>
+                    <div class="min-h-40 bg-gray rounded"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div id="login" class="w-100 flex-column justify-content-center align-items-center login">
