@@ -45,7 +45,8 @@ a:hover {
 }
 
 input[type="search"],
-input[type="tel"], input[type="text"] {
+input[type="tel"],
+input[type="text"] {
     border: none;
     padding: 3px;
     outline: none;
@@ -163,7 +164,8 @@ input[type="tel"], input[type="text"] {
 }
 
 .sel::after {
-    content: "\f078"; /* Unicode for Font Awesome's chevron-down */
+    content: "\f078";
+    /* Unicode for Font Awesome's chevron-down */
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
     position: absolute;
@@ -173,7 +175,7 @@ input[type="tel"], input[type="text"] {
     z-index: 100;
 }
 
-select > option {
+select>option {
     background-color: white;
     color: gray;
 }
@@ -244,6 +246,10 @@ select > option {
     color: #636363;
 }
 
+.whats:hover {
+    background: linear-gradient(to right, #F2E7E9, #D9BDBE);
+    transition: all 300ms ease-in-out;
+}
 
 .chip {
     background: linear-gradient(to right, #F2E7E9, #D9BDBE);
@@ -431,8 +437,10 @@ input[type="checkbox"]:checked {
     gap: 20px;
     width: 80%;
     margin-bottom: 20px;
-    height: 60vh; /* Initial height of the grid */
-    overflow: hidden; /* Hide overflowing content */
+    height: 60vh;
+    /* Initial height of the grid */
+    overflow: hidden;
+    /* Hide overflowing content */
     transition: height 0.5s ease;
 }
 
@@ -452,6 +460,7 @@ input[type="checkbox"]:checked {
     .image-grid {
         display: grid;
         width: 100%;
+        height: 40vh;
         grid-template-columns: repeat(2, minmax(150px, 1fr));
     }
 }
@@ -463,4 +472,53 @@ input[type="checkbox"]:checked {
     background: linear-gradient(to bottom, #efe3e5dd, #e1cfd2, #efe1e2d4);
     box-shadow: 2px -20px 20px 2px #efe3e5dd;
     z-index: 10;
+}
+
+
+/* loading animation */
+/* Animation for pulse effect */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.min-h-40 {
+    min-height: 160px;
+    /* Equivalent to Tailwind's h-40 */
+}
+
+.rounded {
+    border-radius: 8px;
+    /* Equivalent to Tailwind's rounded class */
+}
+
+.bg-gray {
+    background-color: #e5e7eb;
+    /* Equivalent to Tailwind's bg-gray-300 */
+}
+
+.h-12 {
+    height: 48px;
+    /* Equivalent to Tailwind's h-12 */
+}
+
+.row-span-2 {
+    grid-row: span 2;
 }
